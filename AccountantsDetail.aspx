@@ -93,7 +93,7 @@
         </div>
 
         <div>
-            <table id="accountantsTable">
+            <table id="accountantsTable" class="hover">
                 <thead>
                     <tr>
                         <th>ID</th>

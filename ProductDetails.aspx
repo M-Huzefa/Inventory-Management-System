@@ -96,7 +96,7 @@
 
         
         <div>
-            <table id="ProductsTable">
+            <table id="ProductsTable" class="hover">
                 <thead>
                     <tr>
                         <th>Product ID</th>
@@ -167,6 +167,7 @@
                     repFunc(data)
                 }
             });
+            return false
         })
 
         //function to add products
@@ -213,6 +214,7 @@
                     $("#productprice").val(null);
                 }
             });
+            return false
         }
 
         //function to delete products
@@ -231,6 +233,7 @@
                     repFunc(data)
                 }
             });
+            return false
         }
 
         //function to update products
@@ -278,7 +281,7 @@
                 contentType: 'application/json',
                 async: false,
                 success: function (data) {
-                   
+
                     var newTable = $('#ProductsTable').DataTable();
                     newTable.destroy();
                     repFunc(data)
@@ -289,7 +292,8 @@
                     $("#productcategory").val(null);
                     $("#productprice").val(null);
                 }
-            })
+            });
+            return false
         }
 
         //Repeated Function
